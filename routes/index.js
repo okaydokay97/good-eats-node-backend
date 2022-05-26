@@ -5,6 +5,7 @@ module.exports = (app) => {
   const router = require('express').Router()
 
   router.get('/restaurants', restaurants.findAll)
+  router.post('/restaurantSearch', restaurants.restaurantFilter)
 
 
   router.get('/orders', orders.findAll)
@@ -12,8 +13,9 @@ module.exports = (app) => {
 
   router.get('/users', users.findAll)
   router.post('/users', users.create)
+  router.post('/user', users.findOne)
 
 
-  app.use('/', router)
+  app.use(router)
 
 }

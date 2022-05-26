@@ -40,6 +40,7 @@ module.exports = {
       }),
       address: '123 Main St.',
       deliver:false,
+      picture:"https://www.budgetbytes.com/wp-content/uploads/2010/07/Classic-Homemade-Pizza-Dough-close.jpg",
       createdAt: new Date(),
       updatedAt: new Date()
     },{
@@ -69,6 +70,7 @@ module.exports = {
       }),
       address: '672 N Broadway Ave.',
       deliver:false,
+      picture: "https://www.kitchensanctuary.com/wp-content/uploads/2020/12/Quick-Chicken-Ramen-square-FS-22.jpg",
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});

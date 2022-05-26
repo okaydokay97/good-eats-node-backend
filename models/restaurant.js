@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     cuisine: DataTypes.ARRAY(DataTypes.STRING),
     menu: DataTypes.JSON,
     address: DataTypes.STRING,
-    deliver: DataTypes.BOOLEAN
+    deliver: DataTypes.BOOLEAN,
+    picture: DataTypes.STRING
   }, {
     sequelize,
     tableName: 'restaurants',
@@ -26,3 +27,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Restaurant;
 };
+

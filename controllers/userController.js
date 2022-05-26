@@ -8,7 +8,7 @@ exports.findAll = (req,res) => {
 exports.create = (req,res) => {
   if(!req.body.email) {
     res.status(400).send({
-      message: 'Email cannot be empy'
+      message: 'Email cannot be emtpy'
     })
     return
   }
@@ -20,4 +20,19 @@ exports.create = (req,res) => {
   }
   User.create(user)
   .then(data => {res.send(data)})
+}
+
+exports.findOne = async(req, res) => {
+  userInfo = {
+    email: req.body.email,
+    password: req.body.password
+  }
+  let user = await User.findOne({where: userInfo})
+  if (!user) {
+    res.send({
+      message: 'Email and/or Password is incorrect.'
+    })
+    return
+  }
+  res.send(user)
 }

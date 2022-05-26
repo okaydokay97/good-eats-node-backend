@@ -1,19 +1,20 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const { Order, Restaurant, User } = require('./models')
-require('./routes')(app)
+const { sequelize } = require('./models')
 
 
-const corsOptions = {
-  origin: 'http://localhost:3000'
+
+
+let corsOptions = {
+  origin:'http://localhost:3000'
 }
 app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-
-
+require('./routes')(app)
+// sequelize.sync({force:true})
 const PORT = 4000
 
 
