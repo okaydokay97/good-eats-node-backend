@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "good_eats",
+      "database": "good_eats",
+      "username": "rubensfernandes",
+      "password": "laptop123"
+    }
+  ]
+}
